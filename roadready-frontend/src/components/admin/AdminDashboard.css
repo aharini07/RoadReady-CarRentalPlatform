@@ -1,0 +1,97 @@
+/* AdminDashboard.css */
+/* Fix for Admin Sidebar Buttons to match other roles */
+.sidebar-menu button.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 13px 15px;
+    border-radius: 9px;
+    text-decoration: none;
+    color: #D5DED6; /* Light green/grey text */
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.sidebar-menu button.menu-item:hover {
+    background-color: #344D3B;
+    color: #FFFFFF;
+}
+
+.sidebar-menu button.menu-item.active {
+    background-color: #397A45;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.sidebar-menu button.menu-item .menu-icon {
+    margin-right: 15px;
+    font-size: 18px;
+}
+.admin-tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    background: transparent;
+    border: none;
+    border-radius: 9px;
+    color: #D5DED6;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-align: left;
+}
+
+.admin-tab-btn:hover {
+    background-color: #344D3B;
+    color: #FFFFFF;
+}
+
+.admin-tab-btn.active {
+    background-color: #397A45;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid #E6EBE3;
+    color: #20352A;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid #E6EBE3;
+    font-size: 14px;
+    color: #47534d;
+}
+
+/* Form styling for Add Car */
+.admin-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.admin-form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #20352A;
+}

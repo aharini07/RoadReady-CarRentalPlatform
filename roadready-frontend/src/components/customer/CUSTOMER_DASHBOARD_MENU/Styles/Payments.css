@@ -1,0 +1,52 @@
+.payments-table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 10px;
+}
+
+.payments-table th, .payments-table td {
+    padding: 15px; 
+    text-align: left; 
+    border-bottom: 1px solid #E6EBE3; 
+    font-size: 14px;
+}
+
+.payments-table th { 
+    background-color: #F5F7F2; 
+    color: #20352A; 
+    font-weight: 700; 
+}
+
+.payments-table td { 
+    color: #252B27; 
+}
+
+.status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status.success { background: #D4EDDA; color: #155724; }
+.status.refunded { background: #FFF3CD; color: #856404; }
+.status.failed { background: #F8D7DA; color: #721C24; }
+.btn-outline-green {
+    display: inline-block;
+    background-color: transparent;
+    color: #397A45;
+    border: 1.5px solid #397A45;
+    padding: 11px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-outline-green:hover {
+    background-color: #397A45;
+    color: #FFFFFF;
+}

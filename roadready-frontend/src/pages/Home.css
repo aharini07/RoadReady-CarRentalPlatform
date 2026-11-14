@@ -1,0 +1,492 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: #18211f;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home-page {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.navbar {
+    min-height: 82px;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background: white;
+    border-bottom: 1px solid #edf0ed;
+    position: relative;
+    z-index: 10;
+}
+
+.brand {
+    font-size: 26px;
+    font-weight: 800;
+    color: #172c25;
+}
+
+.brand span {
+    color: #16845c;
+}
+
+.nav-links,
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a,
+.login-link {
+    color: #47534d;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.login-link:hover {
+    color: #16845c;
+}
+
+.signup-btn,
+.primary-btn {
+    background: #16845c;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 13px 22px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.signup-btn:hover,
+.primary-btn:hover {
+    background: #106947;
+}
+
+
+.hero-section {
+    background: #f3f8f4;
+    min-height: 510px;
+    padding: 65px 9%;
+    display: grid;
+    /* Changed the ratio so the image side is slightly broader */
+    grid-template-columns: 1fr 1.1fr; 
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-content {
+    max-width: 610px;
+}
+
+.eyebrow {
+    color: #16845c;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.hero-content h1 {
+    font-size: clamp(36px, 4.5vw, 57px);
+    line-height: 1.12;
+    margin: 18px 0;
+    letter-spacing: -2px;
+}
+
+.hero-content h1 span {
+    color: #16845c;
+}
+
+.hero-description {
+    color: #68746d;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 490px;
+    margin-bottom: 28px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 38px;
+    margin-top: 35px;
+}
+
+.hero-stats h3 {
+    margin: 0 0 7px;
+    font-size: 17px;
+}
+
+.hero-stats p {
+    margin: 0;
+    color: #68746d;
+    font-size: 12px;
+}
+
+
+.hero-visual {
+    position: relative;
+    min-height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.hero-circle {
+    width: min(400px, 95%);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #dcefe2;
+    position: absolute;
+    z-index: 0;
+}
+
+.hero-car-image {
+    position: relative;
+    z-index: 1;
+    /* Made the image broader and larger */
+    width: 100%;
+    max-width: 850px; 
+    height: auto;
+    object-fit: contain;
+    /* Removed animation, kept a soft shadow */
+    filter: drop-shadow(0px 20px 25px rgba(0, 0, 0, 0.15)); 
+}
+
+
+.search-section {
+    margin: -30px auto 0;
+    position: relative;
+    z-index: 10;
+    width: 84%;
+    padding: 24px;
+    background: white;
+    box-shadow: 0 12px 35px #183c2812;
+    border: 1px solid #edf0ed;
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr auto;
+    align-items: end;
+    gap: 18px;
+}
+
+.search-section label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.search-section input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #dce3dd;
+    border-radius: 7px;
+    font-size: 13px;
+    outline: none;
+}
+
+.search-section input:focus {
+    border-color: #16845c;
+}
+
+
+.cars-section,
+.about-section {
+    padding: 85px 9%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.section-heading h2,
+.about-section h2 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.section-heading p:not(.eyebrow) {
+    color: #68746d;
+    font-size: 14px;
+}
+
+.outline-btn {
+    padding: 12px 18px;
+    border: 1px solid #16845c;
+    border-radius: 8px;
+    background: white;
+    color: #16845c;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.outline-btn:hover {
+    background: #e4f3e9;
+}
+
+/* CAR GRID */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.car-card {
+    border: 1px solid #e7ece8;
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.car-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px #183c2812;
+}
+
+.car-image {
+    min-height: 180px;
+    background: #f0f5f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.car-type {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: white;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.car-emoji {
+    font-size: 85px;
+}
+
+.car-info {
+    padding: 20px;
+}
+
+.car-info h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+}
+
+.car-info > p {
+    color: #68746d;
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+.car-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.car-bottom strong {
+    font-size: 19px;
+}
+
+.car-bottom span {
+    color: #68746d;
+    font-size: 12px;
+}
+
+.book-btn {
+    background: #e4f3e9;
+    color: #126d4b;
+    padding: 10px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.book-btn:hover {
+    background: #ccebd8;
+}
+
+.demo-note {
+    color: #7b847e;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    background: #f7f9f7;
+    text-align: center;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.benefit-grid > div {
+    padding: 28px 20px;
+    background: white;
+    border: 1px solid #e7ece8;
+    border-radius: 12px;
+}
+
+.benefit-grid span {
+    font-size: 32px;
+}
+
+.benefit-grid h3 {
+    margin: 16px 0 10px;
+}
+
+.benefit-grid p {
+    color: #68746d;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.footer {
+    padding: 35px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-top: 1px solid #edf0ed;
+}
+
+.footer p {
+    color: #68746d;
+    font-size: 12px;
+}
+
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr;
+        padding: 50px 7%;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .hero-description {
+        margin: 0 auto 28px;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 250px;
+        margin-top: 30px;
+    }
+
+    .search-section {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 20px;
+    }
+
+    .car-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 18px 5%;
+        justify-content: center;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .nav-actions {
+        gap: 12px;
+    }
+
+    .hero-content h1 {
+        letter-spacing: -1px;
+    }
+
+    .hero-stats {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .search-section,
+    .car-grid,
+    .benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-section {
+        width: 90%;
+        margin: -20px auto 0;
+    }
+
+    .cars-section,
+    .about-section {
+        padding: 55px 6%;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,174 @@
+/* Modal Overlay (Dark background) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(32, 53, 42, 0.6); /* Dark green with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 13px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    color: #20352A;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.modal-content .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-content label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #20352A;
+}
+
+/* Close Button (X) */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #778078;
+    font-weight: bold;
+}
+
+.modal-close:hover {
+    color: #D9534F;
+}
+
+/* Form Inputs */
+.search-filters { display: flex; gap: 15px; flex-wrap: wrap; }
+
+.form-input {
+    flex: 1; min-width: 150px; padding: 12px 15px;
+    border: 1px solid #E6EBE3; border-radius: 8px;
+    font-family: inherit; font-size: 14px; background-color: #F9FAF8; outline: none;
+}
+
+.form-input:focus { 
+    border-color: #397A45; 
+    background-color: #FFFFFF; 
+}
+
+/* Car Grid */
+.car-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px; 
+    margin-top: 25px;
+}
+
+/* Car Card */
+.car-card {
+    background: #FFFFFF; 
+    border-radius: 13px; 
+    border: 1px solid #E6EBE3;
+    overflow: hidden; 
+    box-shadow: 0 3px 12px rgba(32, 53, 42, 0.04);
+    transition: transform 0.25s ease;
+}
+
+.car-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(32, 53, 42, 0.09); 
+}
+
+/* Car Image (Added to fix layout) */
+.car-image-real {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+/* Placeholder if image is missing */
+.car-image-placeholder {
+    height: 180px; 
+    background-color: #F5F7F2;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 50px;
+}
+
+.car-info { padding: 20px; }
+
+.car-info h3 { 
+    color: #20352A; 
+    margin-bottom: 5px; 
+}
+
+.car-info p { 
+    color: #778078; 
+    font-size: 14px; 
+    margin-bottom: 15px; 
+}
+
+.car-price-row { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.price { 
+    font-weight: 800; 
+    color: #20352A; 
+    font-size: 18px; 
+}
+.cars-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.pagination-button {
+    background-color: #397A45;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.pagination-button:hover:not(:disabled) {
+    background-color: #285E34;
+}
+
+.pagination-button:disabled {
+    background-color: #D5DED6;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    font-weight: bold;
+    color: #20352A;
+    font-size: 14px;
+}

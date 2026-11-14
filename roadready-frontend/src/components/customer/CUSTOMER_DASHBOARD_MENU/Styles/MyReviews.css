@@ -1,0 +1,58 @@
+.review-container {
+    background: white;
+    padding: 30px;
+    border-radius: 13px;
+    border: 1px solid #E6EBE3;
+    max-width: 700px;
+}
+
+.star-rating {
+    display: flex;
+    gap: 8px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #E6EBE3; /* Gray for unselected */
+    margin-bottom: 15px;
+}
+
+.star-rating .active {
+    color: #F5A623; /* Gold for selected */
+}
+
+.past-review-card {
+    background: #F9FAF8;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #E6EBE3;
+    margin-bottom: 15px;
+}
+
+.past-review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.past-review-header h4 {
+    color: #20352A;
+    font-size: 16px;
+}
+
+.review-stars {
+    color: #F5A623;
+    font-size: 16px;
+}
+
+.review-comment {
+    color: #47534d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.review-date {
+    color: #778078;
+    font-size: 12px;
+    margin-top: 10px;
+    display: block;
+}

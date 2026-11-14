@@ -1,0 +1,56 @@
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.booking-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.booking-form label {
+    font-weight: 600;
+    color: #20352A;
+    font-size: 14px;
+}
+
+.booking-form .form-input {
+    padding: 12px;
+    border: 1px solid #E6EBE3;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #F9FAF8;
+    outline: none;
+}
+
+.booking-form .form-input:focus {
+    border-color: #397A45;
+    background-color: #fff;
+}
+
+.price-estimate-box {
+    background-color: #EAF4E9;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #397A45;
+    color: #20352A;
+}
+
+.price-estimate-box h4 {
+    margin-bottom: 10px;
+    color: #397A45;
+}
+
+.price-estimate-box p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.price-estimate-box h3 {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #A4D1A7;
+    font-size: 20px;
+}

@@ -1,0 +1,20 @@
+.cancel-card {
+    display: flex; 
+    flex-direction: column; /* Changed to column to stack the form fields */
+    padding: 20px; 
+    border: 1px solid #E6EBE3; 
+    border-radius: 10px; 
+    background: #F9FAF8;
+}
+.cancel-info h3 { color: #20352A; margin-bottom: 5px; }
+.cancel-info p { color: #778078; font-size: 14px; }
+
+.btn-outline-red {
+    background: transparent; color: #D9534F; border: 1.5px solid #D9534F;
+    padding: 11px 22px; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer;
+}
+.btn-outline-red:hover { background: #D9534F; color: white; }
+
+@media (max-width: 600px) {
+    .cancel-card { flex-direction: column; align-items: flex-start; gap: 15px; }
+}

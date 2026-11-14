@@ -1,0 +1,23 @@
+.profile-form {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+}
+.form-group {
+    display: flex; flex-direction: column; gap: 8px;
+}
+.form-group label {
+    font-size: 14px; font-weight: 600; color: #20352A;
+}
+.profile-input {
+    padding: 12px 15px; border: 1px solid #E6EBE3; border-radius: 8px;
+    font-size: 14px; background-color: #F9FAF8; outline: none; transition: border 0.3s;
+}
+.profile-input:focus {
+    border-color: #397A45; background-color: #FFFFFF;
+}
+.profile-input:disabled {
+    background-color: #E6EBE3; cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .profile-form { grid-template-columns: 1fr; }
+}

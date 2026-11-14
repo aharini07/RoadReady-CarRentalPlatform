@@ -1,0 +1,38 @@
+.signup-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #e8f5ec 0%, #f3f8f4 100%);
+    padding: 2.5rem 0;
+}
+.signup-card {
+    background: #ffffff;
+    border: 1px solid #edf0ed;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem rgba(18, 109, 75, 0.12) !important;
+}
+.signup-title {
+    color: #172c25;
+    font-weight: 800;
+}
+.signup-title span {
+    color: #16845c;
+}
+.signup-card .mb-3 {
+    margin-bottom: 0.8rem !important;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #16845c;
+    box-shadow: 0 0 0 0.25rem rgba(22, 132, 92, 0.15);
+}
+.btn-primary {
+    background-color: #16845c !important;
+    border-color: #16845c !important;
+}
+.btn-primary:hover {
+    background-color: #106947 !important;
+    border-color: #106947 !important;
+}
+.text-primary {
+    color: #16845c !important;
+}
